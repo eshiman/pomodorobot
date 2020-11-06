@@ -20,6 +20,6 @@ heroku login
 heroku apps:create insert_name_of_bot  
 heroku buildpacks:set heroku/python  
 git push heroku main  
-heroku ps:scale web=1  
+heroku ps:scale worker=1  
 heroku logs --tail  
 ```
