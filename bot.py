@@ -33,6 +33,7 @@ async def timer(ctx):
     print("Timer has activated.")
     while POM_STATUS == 'ON':
         minutes = datetime.now().strftime("%M:%S")
+        print(minutes)
         if (minutes in ['00:00','30:00']):
             status_message = "~\nPomodoro session starts now.\n" \
 "To turn off the pomodoro timer, type \"pomodoro off\" into the chat.\n~"
