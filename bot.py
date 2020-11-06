@@ -34,11 +34,11 @@ async def timer(ctx):
     while POM_STATUS == 'ON':
         minutes = datetime.now().strftime("%M:%S")
         if (minutes in ['00:00','30:00']):
-            status_message = "~~~\nPomodoro session starts now.\n" \
-"To turn off pomodoro messages, type \"pomodoro off\" into the chat.\n~"
+            status_message = "~\nPomodoro session starts now.\n" \
+"To turn off the pomodoro timer, type \"pomodoro off\" into the chat.\n~"
             await ctx.send(status_message)
         elif (minutes in ['25:00', '55:00']):
-            status_message = "~~~\nTake a five minute break! " \
+            status_message = "~\nTake a five minute break! " \
 "Write what you have been doing for the last 25 minutes in the chat.\n~"
             await ctx.send(status_message)
         await asyncio.sleep(1)
